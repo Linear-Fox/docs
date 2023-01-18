@@ -1,0 +1,13 @@
+{
+    "name": "LinearFox Documentation",
+    "short_name": "LinearFox",
+    "icons": [
+        {
+            "src": "/LinearFoxP.png",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#7200FF",
+    "background_color": "#29005C",
+    "display": "standalone"
+}
