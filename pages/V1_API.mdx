@@ -1,0 +1,30 @@
+---
+title: Linear Fox API V1 Documentation
+description: "Linear Fox documentation site for developers to help them understand the LinearFox API and Services to how to use them."
+date: 2023-01-15
+image: https://cdn.linearfox.com/assets/img/LinearFoxP.png
+---
+
+# Linear Fox API V1 [Test] Documentation
+
+Welcome to our API! We're glad you're here. Our API allows you to access our platform and retrieve data in a programmatic way. In this documentation, you'll find information on how to authenticate your requests, rate limits, and endpoints available for you to use.
+
+## Authentication
+
+Some endpoints require authentication you'll need to provide a bearer token in the headers of your requests. The bearer token is a string that you can generate from your account dashboard on our website. Once you have the token, you'll need to include it in the headers of your requests like this:
+```bash
+Authorization: Bearer YOUR_TOKEN_HERE & OAuth 2.0 or Using API Key
+```
+
+## Rate Limits
+To ensure fair usage of our API, we've implemented rate limits on all endpoints. The current rate limit is 100 requests per minute. If you exceed this limit, you'll receive a 429 Too Many Requests response.
+
+
+## Endpoints
+Endpoints are the URLs you'll use to access our API. Each endpoint has a specific purpose and returns a specific type of data. The endpoints are grouped into categories based on the type of data they return. You can find more information about each endpoint in the sections below.
+    - GET ```$API_URL/v1/user/data/$USER_ID``` Retrieve a specific user by ID
+    - POST ```$API_URL/v1/auth/check``` Check if a user is authenticated "Bearer Token Required"
+    - PUT & DELETE ```$API_URL/v1/account/editbackground/``` Edit the background of a user "Bearer Token Required"
+
+## Contact Us
+If you have any questions or run into any issues, please don't hesitate to reach out to our support team. We're here to help!
