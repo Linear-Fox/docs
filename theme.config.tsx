@@ -43,6 +43,9 @@ const config = {
         right: "1rem",
         zIndex: 999,
     },
+    editLink: {
+        component: null,
+    },
     darkModeToggleDark: {
         content: "🌙",
         title: "Switch to light mode",
