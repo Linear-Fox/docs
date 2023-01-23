@@ -12,9 +12,9 @@ Other APIs allow you to get information about the LinearFox platform and its ser
     <summary><code>GET</code> <code><b>$API_URL/v1/maintenance/</b></code> <code>(Get Maintenance Status)</code></summary>
     Parameters:
 
-    > | name       |  type         | data type               | description                                                           |
-    > |------------|---------------|-------------------------|-----------------------------------------------------------------------|
-    > | `id`       | `query`       | `string`                | The service to check the status of.                                   |
+    > | name       |  type                  | data type               | description                                                           |
+    > |------------|------------------------|-------------------------|-----------------------------------------------------------------------|
+    > | `id`       | `Path Parameter`       | `string`                | The service to check the status of.                                   |
 
     Responses:
 
@@ -37,9 +37,9 @@ Other APIs allow you to get information about the LinearFox platform and its ser
 <details>
     <summary><code>GET</code> <code><b>$API_URL/v1/other/updates/</b></code> <code>(Get latest updates)</code></summary>
     Parameters:
-    > | name       |  type         | data type               | description                                                           |
-    > |------------|---------------|-------------------------|-----------------------------------------------------------------------|
-    > | `limit`    | `query`       | `integer`               | The number of updates to return.                                      |
+    > | name       |  type                  | data type               | description                                                           |
+    > |------------|------------------------|-------------------------|-----------------------------------------------------------------------|
+    > | `limit`    | `Path Parameter`       | `integer`               | The number of updates to return.                                      |
 
     Responses:
     > | status code | data type     | description                                                           |
@@ -57,9 +57,9 @@ Other APIs allow you to get information about the LinearFox platform and its ser
     <summary><code>GET</code> <code><b>$API_URL/v1/search</b></code> <code>(Search everything in LinearFox)</code></summary>
     Parameters:
 
-    > | name       |  type         | data type               | description                                                           |
-    > |------------|---------------|-------------------------|-----------------------------------------------------------------------|
-    > | `input`    | `query`       | `string`                | The search query.                                                     |
+    > | name       |  type                  | data type               | description                                                           |
+    > |------------|------------------------|----------------|--------------------------------------------------------------|
+    > | `input`    | `query`                | `string`       | The search query.                                            |
 
     Responses:
     > | status code | data type     | description                                                           |
