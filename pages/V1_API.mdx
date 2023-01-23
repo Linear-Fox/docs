@@ -26,5 +26,19 @@ Endpoints are the URLs you'll use to access our API. Each endpoint has a specifi
     - POST ```$API_URL/v1/auth/check``` Check if a user is authenticated "Bearer Token Required"
     - PUT & DELETE ```$API_URL/v1/account/editbackground/``` Edit the background of a user "Bearer Token Required"
 
+## Types of API Parameters
+    - Query string parameters ```$API_URL/v1/user/data/$USER_ID?name=LinearFox&age=20```
+    - Path parameters ```$API_URL/v1/user/data/$USER_ID```
+    - Body parameters ```$API_URL/v1/auth/check```
+
+    ### Query Parameters
+    These are the most common type of parameters. You’ve probably seen them before on your browser’s address bar, even outside the context of APIs. You can find them in the query string of the endpoint, after the ?.
+
+    ### Path Parameters
+    Path parameters are used to identify a specific resource. For example, in the endpoint /users/:id, the id is a path parameter. You can find them in the path of the endpoint, after the /.
+
+    ### Body Parameters
+    Body parameters are used to send data to the API. For example, when you create a new user, you send the user’s name and email in the request body. You can find them in the body of the request.
+
 ## Contact Us
 If you have any questions or run into any issues, please don't hesitate to reach out to our support team. We're here to help!
