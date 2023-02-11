@@ -48,6 +48,21 @@ This is an object representing a user in LinearFox. It contains public informati
     > ```
 </details>
 
-<Callout type="error" emoji="🚫">
-    **Following** endpoint is not available yet.
-</Callout>
+<details>
+    <summary><code>GET</code> <code><b>$API_URL/v1/user/followers/</b></code> <code>(User followers)</code></summary>
+    Parameters:
+
+    > | name       |  type              | data type               | description                                                           |
+    > |------------|--------------------|-------------------------|-----------------------------------------------------------------------|
+    > | userid     |  Required Query    | Number                  | User ID                                                               |
+
+    Responses:
+    > | status code | data type     | description                                                                 |
+    > |-------------|---------------|-----------------------------------------------------------------------------|
+    > | `200`       | `object`      | `{status: '200', followers: 'User followers', following: 'User following'}` |
+
+    Example:
+    > ```javascript
+    > curl --location --request GET 'https://api.linearfox.com/v1/user/followers?userid=1'
+    > ```
+</details>
