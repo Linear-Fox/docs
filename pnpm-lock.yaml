@@ -17,7 +17,6 @@ specifiers:
   next: ^13.0.6
   nextra: 2.0.1
   nextra-theme-docs: 2.0.1
-  prettier: ^2.8.0
   react: ^18.2.0
   react-dom: ^18.2.0
   typescript: 4.9.3
@@ -43,9 +42,8 @@ devDependencies:
   eslint-config-next: 13.0.6_67vzcjuho73k66wgdlnuklaoyu
   eslint-config-prettier: 8.6.0_eslint@8.32.0
   eslint-plugin-mdx: 2.0.5_eslint@8.32.0
-  eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
+  eslint-plugin-prettier: 4.2.1_th6pcbf3nm4pj75asb7sqi32zq
   eslint-plugin-react: 7.32.0_eslint@8.32.0
-  prettier: 2.8.3
   typescript: 4.9.3
 
 packages:
@@ -1454,7 +1452,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_cn4lalcyadplruoxa5mhp7j3dq:
+  /eslint-plugin-prettier/4.2.1_th6pcbf3nm4pj75asb7sqi32zq:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -1467,7 +1465,6 @@ packages:
     dependencies:
       eslint: 8.32.0
       eslint-config-prettier: 8.6.0_eslint@8.32.0
-      prettier: 2.8.3
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -3357,12 +3354,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
-    dev: true
-
-  /prettier/2.8.3:
-    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /prop-types/15.8.1:
