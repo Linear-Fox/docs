@@ -1,4 +1,4 @@
-.cards {
+.cards {  
     display: grid;
     --rows: 3;
     grid-template-columns: repeat(

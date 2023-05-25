@@ -1,7 +1,26 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import cn from 'clsx'
-import Link from 'next/link' 
-import styles from './card.module.css'
+import { Anchor } from './anchor'
+
+const classes = {
+  cards: cn('nextra-cards nx-mt-4 nx-gap-4 nx-grid'),
+  card: cn(
+    'nextra-card nx-group nx-flex nx-flex-col nx-justify-start nx-overflow-hidden nx-rounded-lg nx-border nx-border-gray-200',
+    'nx-text-current nx-no-underline dark:nx-shadow-none',
+    'hover:nx-shadow-gray-100 dark:hover:nx-shadow-none nx-shadow-gray-100',
+    'active:nx-shadow-sm active:nx-shadow-gray-200',
+    'nx-transition-all nx-duration-200 hover:nx-border-gray-300'
+  ),
+  title: cn(
+    'nx-flex nx-font-semibold nx-items-start nx-gap-2 nx-p-4 nx-text-gray-700 hover:nx-text-gray-900'
+  )
+}
+
+const arrowEl = (
+  <span className="nx-transition-transform nx-duration-75 group-hover:nx-translate-x-[2px]">
+    →
+  </span>
+)
 
 export function Card({
   children,
@@ -13,93 +32,81 @@ export function Card({
   ...props
 }: {
   children: ReactNode
-  title: string,
-  icon: ReactNode,
-  image?: boolean,
-  arrow?: boolean,
+  title: string
+  icon: ReactNode
+  image?: boolean
+  arrow?: boolean
   href: string
 }) {
-  const animatedArrow = arrow ? (
-    <span
-      className={cn(
-        'transition-transform duration-75',
-        'group-hover:translate-x-[2px]'
-      )}
-    >
-      →
-    </span>
-  ) : null
+  const animatedArrow = arrow ? arrowEl : null
 
   if (image) {
     return (
-      <Link
+      <Anchor
         href={href}
         className={cn(
-          styles.card,
-          'group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 bg-gray-100 text-current no-underline shadow shadow-gray-100 transition-all duration-200 dark:border-neutral-700 dark:bg-neutral-800 dark:text-gray-50 dark:shadow-none',
-          'hover:border-gray-300 hover:shadow-lg hover:shadow-gray-100 dark:hover:border-neutral-500 dark:hover:bg-neutral-700 dark:hover:shadow-none',
-          'active:shadow-sm active:shadow-gray-200'
+          classes.card,
+          'nx-bg-gray-100 nx-shadow dark:nx-border-neutral-700 dark:nx-bg-neutral-800 dark:nx-text-gray-50 hover:nx-shadow-lg dark:hover:nx-border-neutral-500 dark:hover:nx-bg-neutral-700'
         )}
         {...props}
       >
         {children}
         <span
           className={cn(
-            styles.title,
-            'gap-2 p-4 text-gray-700 dark:text-gray-300',
-            'hover:text-gray-900 dark:hover:text-gray-100'
+            classes.title,
+            'dark:nx-text-gray-300 dark:hover:nx-text-gray-100'
           )}
         >
           {icon}
-          <span className="flex gap-1">
+          <span className="nx-flex nx-gap-1">
             {title}
             {animatedArrow}
           </span>
         </span>
-      </Link>
+      </Anchor>
     )
   }
 
   return (
-    <Link
+    <Anchor
       href={href}
       className={cn(
-        styles.card,
-        'group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 bg-transparent text-current no-underline shadow-sm shadow-gray-100 transition-all duration-200 dark:border-neutral-800 dark:shadow-none',
-        'hover:border-gray-300 hover:bg-slate-50 hover:shadow-md hover:shadow-gray-100 dark:hover:border-neutral-700 dark:hover:bg-neutral-900 dark:hover:shadow-none',
-        'active:shadow-sm active:shadow-gray-200'
+        classes.card,
+        'nx-bg-transparent nx-shadow-sm dark:nx-border-neutral-800 hover:nx-bg-slate-50 hover:nx-shadow-md dark:hover:nx-border-neutral-700 dark:hover:nx-bg-neutral-900'
       )}
       {...props}
     >
       <span
         className={cn(
-          styles.title,
-          'gap-2 p-4 text-gray-700 dark:text-neutral-200',
-          'hover:text-gray-900 dark:hover:text-neutral-50'
+          classes.title,
+          'dark:nx-text-neutral-200 dark:hover:nx-text-neutral-50'
         )}
       >
         {icon}
         {title}
         {animatedArrow}
       </span>
-    </Link>
+    </Anchor>
   )
 }
 
 export function Cards({
   children,
-  num,
+  num = 3,
+  className,
+  style,
   ...props
 }: { num?: number } & ComponentProps<'div'>) {
   return (
     <div
-      className={cn(styles.cards, 'mt-4 gap-4')}
+      className={cn(classes.cards, className)}
       {...props}
-      style={{
-        // @ts-expect-error -- todo: enhance style prop to accept css variables
-        '--rows': num || 3,
-        ...props.style
-      }}
+      style={
+        {
+          ...style,
+          '--rows': num
+        } as CSSProperties
+      }
     >
       {children}
     </div>
