@@ -10,7 +10,7 @@ import { Callout } from 'nextra-theme-docs';
 This is an object representing a user in LinearFox. It contains public information about the user, such as their name, email address, and phone number if its public.
 
 <details>
-    <summary><code>GET</code> <code><b>$API_URL/v1/user/data/</b></code> <code>(GET profile data)</code></summary>
+    <summary><code>GET</code> <code><b>/v1/user/data/</b></code> <code>(GET profile data)</code></summary>
     Parameters:
 
     > | name       |  type           | data type               | description                                                           |
@@ -30,7 +30,7 @@ This is an object representing a user in LinearFox. It contains public informati
 </details>
 
 <details>
-    <summary><code>GET</code> <code><b>$API_URL/v1/user/activity/</b></code> <code>(User activity - Projects, Repos, etc)</code></summary>
+    <summary><code>GET</code> <code><b>/v1/user/activity/</b></code> <code>(User activity - Projects, Repos, etc)</code></summary>
     Parameters:
 
     > | name       |  type              | data type               | description                                                           |
@@ -49,7 +49,7 @@ This is an object representing a user in LinearFox. It contains public informati
 </details>
 
 <details>
-    <summary><code>GET</code> <code><b>$API_URL/v1/user/followers/</b></code> <code>(User followers)</code></summary>
+    <summary><code>GET</code> <code><b>/v1/user/followers/</b></code> <code>(User followers)</code></summary>
     Parameters:
 
     > | name       |  type              | data type               | description                                                           |
@@ -65,4 +65,4 @@ This is an object representing a user in LinearFox. It contains public informati
     > ```javascript
     > curl --location --request GET 'https://api.linearfox.com/v1/user/followers?userid=1'
     > ```
-</details>
+</details> 

@@ -1,14 +1,57 @@
 ---
 title: Account
 description: "Linear Fox documentation site for developers to help them understand the LinearFox API and Services to how to use them."
-date: 2023-01-16
+date: 2023-05-21
 image: https://cdn.linearfox.com/assets/img/LinearFoxP.png
 ---
 import { Callout } from 'nextra-theme-docs';
+import { Cards, Card } from 'components/card';
+import { Security, Update, Other } from '@material-ui/icons';
 
 # Account
 In account APIs needs to be authenticated with the Bearer Token or API Key. This section is created for managing the account, Update & Deletes.
+<Callout type="info" emoji="💡">
+  <b>Base URL:</b> <code>https://api.linearfox.com/v1/account</code>
+</Callout> 
 
-<Callout type="warning" emoji="⚠️">
-    **Oops!** Not available yet.
-</Callout>
+Before you want to edit account you need verify password for security reasons. You can verify password by sending a POST request to the following endpoint. After you verify password you will get a temporary token which will be valid for 1 hour. You can use this token to update account details.
+<details>
+    <summary><code>POST</code> <code><b>/v1/account/security</b></code> <code>Verify Password (Create token)</code></summary>
+      Authorization required:
+        ```OAuth2.0 Bearer Token```
+
+    Parameters:
+
+    > | name       |  type         | data type               | description                                                           |
+    > | ---------- | ------------- | ----------------------- | --------------------------------------------------------------------- |
+    > | password   | body          | string                  | Password of the account                                               |
+
+    Responses:
+        Responses:
+    > | http code     | content-type                      | response   
+    > |---------------|-----------------------------------|--------------------------------------------------------------------------|                                                              |
+    > | `200`         | `application/json`                | `{"message": "Success", "token" {'YOUR TEMP TOKEN'} }`                                 |
+    > | `401`         | `application/json`                | `{"message": "Authentication required"}`                        |
+
+    Example cURL:
+    ```bash
+    curl --location 'https://api.linearfox.com/v1/account/security' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --header 'Authorization: Bearer [YOUR TOKEN] \
+    --data-urlencode 'password=' 
+    ```	
+</details>
+
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <Card image arrow title="Security" href="/V1_API/account/security" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/susfox.png)</>
+  </Card>
+    <Card image arrow title="Update Account" href="/V1_API/account/update" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/79cfab4d-48e3-40a3-a824-8e3f34da3fc7.png)</>
+  </Card>
+    <Card image arrow title="Others" href="/V1_API/account/others" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/ctfox.png)</>
+  </Card>
+</div>
+
+Select the section which you side to learn more about.

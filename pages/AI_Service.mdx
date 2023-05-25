@@ -1,0 +1,54 @@
+---
+title: AI Services
+description: "Linear Fox documentation site for developers to help them understand the LinearFox API and Services to how to use them."
+date: 2023-02-10
+image: https://cdn.linearfox.com/assets/img/LinearFoxP.png
+---
+
+import { Card, Cards } from '@components/card' 
+import { Callout } from 'nextra-theme-docs' 
+ 
+<Callout type="warning" emoji="⚠️">
+    Under development
+</Callout>
+
+# Linear Fox API Documentation
+
+## What is Linear Fox AI?
+Linear Fox AI is a set of APIs made for researching and developing AI. This API includes our trained models and a third party ai models. Pre-trained text models, vision models, audio models, and also multimodal models! like the PaLM lang model or yolov5 vision model.
+
+## How to use AI APIs?
+To use the Linear Fox AI APIs, you must have an account. Open an account [here](https://account.linearfox.com/auth/signup). If you already have an account, create an API Key in the security "settings" or use your account's cookie token to access the API.
+
+### Simple linearfoxai-python library [git link](https://github.com/Linear-Fox/linearfoxai-python) [pypi link](https://pypi.org/project/linearfoxai/)
+
+This library is still in development, we in very early stages of development. This just a simple code.
+
+```python
+from linearfoxai import LinearFoxAI
+    
+class TestAI:
+    def __init__(self):
+        self.text_model = "VaporeonML" # Use GPT, PaLM, Vicuna or our trained models
+        self.image_model = "yolov5"
+        self.audio_model = "wav2vec2"
+        self.ai = LinearFoxAI("YOUR_API_KEY")
+    
+    def test_ai(self):
+        text = "Hello, my name is fargo, how are you?"
+        image_path = "path/to/image.jpg"
+        audio_path = "path/to/audio.wav"
+        
+        text_result = self.ai.text(self.text_model, text)
+        image_result = self.ai.image(self.image_model, image_path)
+        audio_result = self.ai.audio(self.audio_model, audio_path)
+        
+        print("Text Result: ", text_result)
+        print("Image Result: ", image_result)
+        print("Audio Result: ", audio_result)
+
+if __name__ == "__main__":
+    TestAI().test_ai()
+```
+
+By this library, you will call eaiser the APIs and its open source, you can contribute to it. We will add more features in the future.

@@ -1,0 +1,27 @@
+{
+    "home": {
+        "type": "page",
+        "title": "Website",
+        "href": "https://linearfox.com/"
+    },
+    "account": {
+        "type": "page",
+        "title": "Account",
+        "href": "https://account.linearfox.com/"
+    },
+    "ai": {
+        "type": "page",
+        "title": "AI",
+        "href": "https://ai.linearfox.com/"
+    },
+    "research": {
+        "type": "page",
+        "title": "Research",
+        "href": "https://research.linearfox.com/"
+    },
+    "docs": {
+        "type": "page",
+        "title": "Documentation",
+        "href": "/"
+    }
+}

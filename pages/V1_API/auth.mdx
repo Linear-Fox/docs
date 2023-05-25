@@ -14,7 +14,7 @@ Authentication methods
 Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.
 
 <details>
-    <summary><code>POST</code> <code><b>$API_URL/v1/auth/login</b></code> <code>(Create a new token "Login to Linear Fox Account")</code></summary>
+    <summary><code>POST</code> <code><b>/v1/auth/login</b></code> <code>(Create a new token "Login to Linear Fox Account")</code></summary>
     Parameters:
 
     > | name       |  type         | data type               | description                                                           |
@@ -44,7 +44,7 @@ Your API keys carry many privileges, so be sure to keep them secure! Do not shar
 </details>
 
 <details>
-    <summary><code>GET</code> <code><b>$API_URL/v1/auth/token</b></code> <code>(GET token information)</code></summary>
+    <summary><code>GET</code> <code><b>/v1/auth/token</b></code> <code>(GET token information)</code></summary>
     Authorization required:
         ```OAuth 2.0 Bearer Token``` or
         ```API Key```
