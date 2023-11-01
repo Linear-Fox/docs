@@ -1,29 +1,42 @@
-<center>
-	<a href="https://linearfox.com">Website</a> •
-	<a href="https://docs.linearfox.com">Docs</a> •
-	<a href="https://discord.gg/fyJWS4yrM8">Discord</a> •
-	<a href="https://twitter.com/linear_fox">Twitter</a>
-</center> 
+<div align="center">
+  <a href="https://linearfox.com">Website</a> •
+  <a href="https://docs.linearfox.com">Docs</a> •
+  <a href="https://rvlt.gg/5BS2X1xs">Revolt</a> •
+  <a href="https://twitter.com/linear_fox">Twitter</a>
+</div>
 
-## Documentation for Linear Fox
-![Website](https://img.shields.io/website?url=https://linearfox.com)
+# Documentation for Linear Fox
 
-Read docs for the Project Linear Fox.
-⚠️ This project is currently in the alpha phase of development! ⚠️
+![Website Status](https://img.shields.io/website?url=https://linearfox.com)
 
-### Install development tools:
-[Install Node.js with NPM](https://nodejs.org/en/download/package-manager/)
-[Install PNPM](https://pnpm.io/installation)
+Welcome to the official documentation for Project Linear Fox.
 
-### Install dependencies:
-```
-Install: pnpm i
-Run: pnpm dev
------ Build -----
+**⚠️ Please Note:** This project is currently in the alpha phase of development, and we appreciate your feedback and support as we work to make it even better!
+
+## Getting Started
+
+### Install Development Tools
+
+To get started with Linear Fox, make sure you have the following development tools installed:
+
+- [Node.js with NPM](https://nodejs.org/en/download/package-manager/)
+- [PNPM](https://pnpm.io/installation)
+
+### Install Dependencies
+
+Once you have the necessary tools installed, follow these steps to set up the project:
+
+Install project dependencies using PNPM:
+
+```bash
+pnpm i
+pnpm dev
 pnpm build
 pnpm start
 ```
 
-Server is running on [localhost:3000](http://localhost:3000/) "Main Port"
+### Access the Application
+
+Once the server is up and running, you can access the application in your web browser at http://localhost:3000.
 
 Author: Nathan Fargo

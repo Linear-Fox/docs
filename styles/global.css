@@ -21,3 +21,7 @@ body {
 footer {
     display: none;
 }
+
+.underline {
+    text-decoration: underline;
+}

@@ -25,7 +25,7 @@ const config = {
             return (
                 <>
                     <Link target="_blank" href="https://linearfox.com/">🦊 Linear Fox Website →</Link>
-                    <Link target="_blank" href="https://discord.gg/fyJWS4yrM8">👨‍💻 Our Discord Server →</Link>
+                    <Link target="_blank" href="https://rvlt.gg/5BS2X1xs">👨‍💻 Our Revolt Server →</Link>
                 </>
             );
         },

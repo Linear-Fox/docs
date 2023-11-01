@@ -1,0 +1,154 @@
+openapi: 3.0.3
+info:
+  title: Linear Fox OpenAPI
+  description: >
+    Welcome to Linear Fox OpenAPI! We're glad you're here. Our API allows you to
+    access our platform and retrieve data in a programmatic way. In this
+    documentation, you'll find information on how to authenticate your requests,
+    rate limits, and endpoints available for you to use.
+
+
+    Recommend checking our documentation for more details: [Linear Fox API
+    Documentation](https://docs.linearfox.com/V1_API)
+  termsOfService: https://linearfox.com/legal/terms
+  contact:
+    email: ntfargo@proton.me
+  version: 0.5.9 TEST
+externalDocs:
+  description: Our Website
+  url: https://linearfox.com
+servers:
+  - url: https://api.linearfox.com
+    description: Main API (Account)
+  - url: https://ai.api.example.com
+    description: AI - API
+  - url: https://research.api.example.com
+    description: Research API
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+tags:
+  - name: User
+    description: Public information regarding the user account 'linearfox.'
+  - name: Profile Views
+    description: The number of times someone has viewed someone else's profile.
+  - name: Others
+    description: Other API functions, such as checking server version and status.
+paths:
+  /v1/user/data/{id}:
+    get:
+      tags: [User]
+      servers:
+        - url: https://api.linearfox.com
+      summary: Public Informations from $USER
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /v1/user/activity/{UserID}:
+    get:
+      tags: [User]
+      summary: User activity
+      parameters:
+        - name: UserID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /v1/user/followers:
+    get:
+      tags: [User]
+      summary: Followers
+      parameters:
+        - name: userid
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /v1/viewuser:
+    post:
+      tags: [Profile Views]
+      summary: View Profile
+      security:
+        - bearerAuth: [] 
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                profileId:
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+  /v1/viewuser/profile-views/{UserID}:
+    get:
+      tags: [Profile Views]
+      summary: getViewsByProfileId
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: UserID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /v1/maintenance/:
+    get:
+      tags: [Others]
+      summary: Maintenance
+      responses:
+        '200':
+          description: Successful response
+  /v1/other/updates/:
+    get:
+      tags: [Others]
+      summary: Updates
+      responses:
+        '200':
+          description: Successful response
+  /v1/search:
+    get:
+      tags: [Others]
+      summary: Search
+      parameters:
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /api.twitch.tv/helix/streams:
+      get:
+        tags: [Others]
+        summary: Twitch Status
+        parameters:
+          - name: user_login
+            in: query
+            required: true
+            schema:
+              type: string
+            example: linear_fox
+        responses:
+          '200':
+            description: Successful response
