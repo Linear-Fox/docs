@@ -1,4 +1,4 @@
-<center><img src="public/512.webp" alt="Linear Fox Logo" width="100"></center>
+<p align="center"><img src="public/512.webp" style="text-align: center;" alt="Linear Fox Logo" width="100"></p>
 
 <div align="center">
   <a href="https://linearfox.com">Website</a> •
