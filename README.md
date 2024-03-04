@@ -1,7 +1,9 @@
+<center><img src="public/512.webp" alt="Linear Fox Logo" width="100"></center>
+
 <div align="center">
   <a href="https://linearfox.com">Website</a> •
   <a href="https://docs.linearfox.com">Docs</a> •
-  <a href="https://rvlt.gg/5BS2X1xs">Revolt</a> •
+  <a href="https://discord.linearfox.com/">Discord</a> •
   <a href="https://twitter.com/linear_fox">Twitter</a>
 </div>
 
