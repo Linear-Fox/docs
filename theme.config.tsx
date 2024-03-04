@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 import urlcat from "urlcat";
-import logo from "./public/lfx.png";
+import logo from "./public/512.webp";
 
 const useDark = () => {
     const { resolvedTheme } = useTheme();
@@ -82,12 +82,12 @@ const config = {
         return (
             <>
                 <Image
-                    src={isDark ? "/LinearFoxP.png" : "/LinearFoxP.png"}
+                    src={isDark ? "/512.webp" : "/512.webp"}
                     alt="Linear Fox Logo"
-                    width={70}
-                    height={70}
+                    width={45}
+                    height={45}
                 />
-                <span className="ml-2 text-xl font-bold">Linear Fox Docs</span>
+                <span className="ml-4 text-xl font-bold">Linear Fox Docs</span>
             </>
         );
     },
