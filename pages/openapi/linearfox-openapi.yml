@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.3
 info:
   title: Linear Fox OpenAPI
   description: >
@@ -19,11 +19,11 @@ externalDocs:
   url: https://linearfox.com
 servers:
   - url: https://api.linearfox.com
-    description: Main API (Account)
+    description: Main API
   - url: https://ai.api.linearfox.com
-    description: AI - API
+    description: Linear Fox AI & Machine Learning API.
   - url: https://research.api.linearfox.com
-    description: Research API (Test)
+    description: The Linear Fox Research API
 components:
   securitySchemes:
     bearerAuth:
@@ -152,3 +152,32 @@ paths:
         responses:
           '200':
             description: Successful response
+  /moderation:
+    put:
+      summary: "Upload a file for moderation and analysis."
+      description: "This endpoint allows for uploading a file to be moderated and analyzed with Linear Fox's machine-learning system."
+      tags:
+        - Moderation
+      security:
+        - bearerAuth: []
+      servers:
+        - url: https://ai.api.linearfox.com
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: "File to be uploaded."
+      responses:
+        '200':
+          description: "Results successfully returned!" 
+        '400':
+          description: 
+            - "No file part."
+            - "No file selected."
+            - "Invalid file format."
