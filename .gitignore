@@ -1,6 +1,3 @@
-# Linear Fox Specified gitignore
-
-# all
 /node_modules
 /.next
 /.out
