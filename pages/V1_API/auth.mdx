@@ -1,0 +1,32 @@
+---
+title: Authentication
+description: "Linear Fox documentation site for developers to help them understand the LinearFox API and Services to how to use them."
+date: 2023-05-21
+image: https://cdn.linearfox.com/assets/img/LinearFoxP.png
+---
+import { Callout } from 'nextra-theme-docs';
+import { Cards, Card } from 'components/card';
+import { Security, Update, Other } from '@material-ui/icons';
+
+# Authentication
+Most API requests require authentication. After you create account, you can create a API-Key or grab the access token from the browser console log "cookies" of your account. Set this token in the Authorization header of requests to the API for protected endpoints.
+
+This API enables you to manage all aspects of your Linear Fox account and services.
+Authentication methods
+    - ```API Key``` - Create and manage access tokens for your account.
+    - ```OAuth 2.0 Bearer Token``` - Authenticate with a bearer token.
+
+Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.
+
+<br />
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <Card image arrow title="AI" href="https://ai.linearfox.com/" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/susfox.png)</>
+  </Card>
+    <Card image arrow title="Research" href="https://research.linearfox.com/" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/79cfab4d-48e3-40a3-a824-8e3f34da3fc7.png)</>
+  </Card>
+    <Card image arrow title="Account" href="https://account.linearfox.com/" style={{ width: '30%' }}>
+    <>![Documentation theme](https://ai.linearfox.com/assets/output-gens/ctfox.png)</>
+  </Card>
+</div> 

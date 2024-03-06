@@ -6,11 +6,7 @@ image: https://cdn.linearfox.com/assets/img/LinearFoxP.png
 ---
 
 import { Card, Cards } from '@components/card' 
-import { Callout } from 'nextra-theme-docs' 
- 
-<Callout type="warning" emoji="⚠️">
-    Under development
-</Callout>
+import { Callout } from 'nextra-theme-docs'  
 
 # Linear Fox API Documentation
 
@@ -19,6 +15,10 @@ Linear Fox AI is a set of APIs made for researching and developing AI. This API 
 
 ## How to use AI APIs?
 To use the Linear Fox AI APIs, you must have an account. Open an account [here](https://account.linearfox.com/auth/signup). If you already have an account, create an API Key in the security "settings" or use your account's cookie token to access the API.
+
+<Callout type="info" emoji="ℹ️">
+    <a class="underline" target="_blank" href="/api-docs">Click here to continue to the OpenAPI docs.</a>
+</Callout>
 
 ### Simple linearfoxai-python library [git link](https://github.com/Linear-Fox/linearfoxai-python) [pypi link](https://pypi.org/project/linearfoxai/)
 
@@ -29,7 +29,7 @@ from linearfoxai import LinearFoxAI
     
 class TestAI:
     def __init__(self):
-        self.text_model = "VaporeonML" # Use GPT, PaLM, Vicuna or our trained models
+        self.text_model = "vulpestra" # Use GPT, PaLM, Vicuna or our vulpestra trained models
         self.image_model = "yolov5"
         self.audio_model = "wav2vec2"
         self.ai = LinearFoxAI("YOUR_API_KEY")
