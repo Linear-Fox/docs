@@ -1,0 +1,25 @@
+---
+title: Moderation
+description: "Content Moderation & Computer Vision"
+date: 2024-03-09
+---
+
+import { Callout } from 'nextra-theme-docs'  
+
+# Content Moderation
+
+Linear Fox provides a platform for content moderation via Computer Vision. It allows you to automatically detect and classify inappropriate content.
+
+Using this endpoint, you need to create a Linear Fox account and generate an `API_key`, or use a generated authentication bearer token. See: [V1_API](/V1_API/auth).
+
+# Features
+ 
+- Identify Objects: Detect inappropriate objects like explosives, drugs, and weapons. (Not available yet)
+- Detect Explicit Content: Detect unrealistic or unknowingly inappropriate images.
+
+# User Privacy Policy
+We respect user privacy concerns, hence we don't store or pass on any of the images. However, `date_created`, `filename`, `results` and `user_id` are the only parameters that are stored for learning how the model can be improved upon.
+
+<Callout type="info" emoji="ℹ️">
+    <a class="underline" target="_blank" href="/api-docs">Click here to continue to the OpenAPI docs.</a>
+</Callout>
