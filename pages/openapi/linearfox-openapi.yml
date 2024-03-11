@@ -153,7 +153,7 @@ paths:
           '200':
             description: Successful response
   /moderation:
-    put:
+    post:
       summary: "Upload a file for moderation and analysis."
       description: "This endpoint allows for uploading a file to be moderated and analyzed with Linear Fox's machine-learning system."
       tags:
