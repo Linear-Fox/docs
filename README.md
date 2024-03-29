@@ -4,7 +4,7 @@
   <a href="https://linearfox.com">Website</a> •
   <a href="https://docs.linearfox.com">Docs</a> •
   <a href="https://discord.linearfox.com/">Discord</a> •
-  <a href="https://twitter.com/linear_fox">Twitter</a>
+  <a href="https://x.com/linear_fox">X</a>
 </div>
 
 # Documentation for Linear Fox
